@@ -10,7 +10,8 @@ def user_input():
     return target_class, video_path
 
 if __name__ == '__main__':
-    target_class = "Penguin"
-    video_path = "./test2.mp4"
-    #create_images.create_images(target_class, video_path)
+    rv = user_input()
+    target_class = rv[0]
+    video_path = rv[1]
+    create_images.create_images(target_class, video_path)
     create_video.create_video()
